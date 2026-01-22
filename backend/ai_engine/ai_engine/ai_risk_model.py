@@ -6,7 +6,3 @@ y = ["High", "Low", "High", "Low", "Medium"]
 
 model = DecisionTreeClassifier()
 model.fit(X, y)
-
-# Test prediction
-print("Predicted Risk:", model.predict([[80]])[0])
-
