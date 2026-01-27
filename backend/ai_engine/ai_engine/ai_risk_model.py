@@ -1,8 +1,11 @@
-from sklearn.tree import DecisionTreeClassifier
+class DummyRiskModel:
+    def analyze_alert(self, alert: str):
+        return {
+            "alert": alert,
+            "severity": "low",
+            "false_positive": True,
+            "confidence": 0.87
+        }
 
-# Sample SOC alert data (risk score)
-X = [[90], [20], [85], [15], [70]]
-y = ["High", "Low", "High", "Low", "Medium"]
+model = DummyRiskModel()
 
-model = DecisionTreeClassifier()
-model.fit(X, y)
