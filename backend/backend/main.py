@@ -5,8 +5,8 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"status": "SOC AI Backend Running"}
+    return {"status": "SOC AI SaaS running"}
 
 @app.post("/analyze")
-def analyze(alert: str):
-    return model.analyze_alert(alert)
+def analyze_alert(alert: str):
+    return model(alert)
